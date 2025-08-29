@@ -33,6 +33,10 @@ public class SHAEncryption {
             System.out.println("Input : " + input1);
             System.out.println("Output : " + toHexString(getSHA(input1)));
 
+            String input2 = "ROT(7)";
+            System.out.println("Input : " + input2);
+            System.out.println("Output : " + toHexString(getSHA(input2)));
+
         }catch (NoSuchAlgorithmException e){
             System.out.println(e.getMessage());
         }
