@@ -10,9 +10,7 @@ package com.mycompany.mavenproject1.SOLID;
  */
 
 class Cook {
-    public void bakePastry(){
-        System.out.println("Baking tasty Pastries.....");
-    }
+    public void bakePastry() { System.out.println("Baking tasty Pastries.....");}
 }
 
 class StoreManager {
@@ -21,7 +19,7 @@ class StoreManager {
     }
 }
 
-class CustomerServices  {
+class CustomerService {
     public void customerFeedback() {
         System.out.println("Take feedback from customers.......");
     }
@@ -34,10 +32,18 @@ class Cleaner {
 }
 
 public class SingleResponsibility {
-    Cook baker = new Cook();
-    StoreManager manager = new StoreManager();
-    Cleaner janitor = new Cleaner();
-    CustomerServices waiter = new CustomerServices();
-    
-    
+    public static void main(String[] args) {
+        Cook baker = new Cook();
+        StoreManager manager = new StoreManager();
+        CustomerService service = new CustomerService();
+        Cleaner cleaner = new Cleaner();
+
+        baker.bakePastry();
+        manager.orderNewSupplies();
+        service.customerFeedback();
+        cleaner.cleanTheStore();
+
+        return;
+
+    }
 }
